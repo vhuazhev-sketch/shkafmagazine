@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕸️ ШКАФ — магазин одежды</title>
+    <!-- Скрипт Telegram Web App -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="styles666.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">🕸️ ШКАФ 🕸️</div>
+    </header>
+    <main class="content">
+        <!-- Главная страница -->
+        <section id="mainPage" class="page active">
+            <h2>Каталог</h2>
+            <div id="productsGrid" class="products-grid"></div>
+        </section>
+        <!-- Страница товара -->
+        <section id="productPage" class="page">
+            <button class="back-btn" id="backToCatalog">← Назад</button>
+            <div class="product-view">
+                <div class="product-hero">
+                    <div class="product-emoji" id="productEmoji">👕</div>
+                    <div class="variants" id="productVariants"></div>
+                </div>
+                <div class="product-name" id="productName">Товар</div>
+                <div class="meta-row">
+                    <div class="meta-left" id="productReviews">Отзывы: 0</div>
+                    <div class="meta-right" id="productPrice">0₽</div>
+                </div>
+                <button class="buy-btn" id="buyBtn">Купить</button>
+                <div class="product-desc" id="productDesc"></div>
+            </div>
+        </section>
+        <!-- Страница отзывов -->
+        <section id="reviewsPage" class="page">
+            <h2>Отзывы о магазине</h2>
+            <div class="review-card"><b>Алина</b><br>Очень стильные вещи!</div>
+            <div class="review-card"><b>Максим</b><br>Доставка быстрая, рекомендую.</div>
+            <div class="review-card"><b>Катя</b><br>Качество супер 🔥</div>
+            <div class="review-card"><b>Игорь</b><br>Нашёл идеальную куртку.</div>
+            <div class="review-card"><b>Мария</b><br>Буду заказывать ещё!</div>
+        </section>
+        <!-- Страница поддержки -->
+        <section id="supportPage" class="page">
+            <h2>Поддержка</h2>
+            <a class="support-btn" href="https://t.me/theemptyprod" target="_blank">Написать @theemptyprod</a>
+            <a class="support-btn" href="https://t.me/cryptowichser" target="_blank">Написать @cryptowichser</a>
+        </section>
+    </main>
+    <!-- Нижняя навигационная полоса -->
+    <nav class="bottomnav">
+        <button class="tab active" data-page="mainPage" aria-label="Главная">🏠</button>
+        <button class="tab" data-page="reviewsPage" aria-label="Отзывы">⭐</button>
+        <button class="tab" data-page="supportPage" aria-label="Поддержка">💬</button>
+    </nav>
+    <script src="app666.js"></script>
+</body>
+</html>
