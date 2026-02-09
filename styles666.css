@@ -1,0 +1,205 @@
+/* Цветовая схема */
+:root {
+    --bg: #0f0f10;
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.65);
+    --card: rgba(255, 255, 255, 0.07);
+    --border: rgba(255, 255, 255, 0.12);
+    --accent: #2ea6ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Верхняя панель */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.65);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 12px 10px;
+    backdrop-filter: blur(10px);
+}
+.brand {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+}
+
+/* Основной контент */
+.content {
+    padding: 14px;
+    padding-bottom: 60px; /* место для нижней панели */
+}
+h2 {
+    margin: 6px 0 12px;
+}
+
+/* Сетка товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+.product-card:active {
+    transform: scale(0.99);
+}
+.product-card .emoji {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+.product-card .name {
+    font-weight: 700;
+}
+.product-card .sub {
+    color: var(--muted);
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+/* Страница товара */
+.back-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 8px 10px;
+    margin: 2px 0 12px;
+}
+.product-view {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+}
+.product-hero {
+    text-align: center;
+    padding: 8px 0 6px;
+}
+.product-emoji {
+    font-size: 64px;
+    line-height: 1;
+}
+.variants {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.variant {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    font-size: 22px;
+}
+.product-name {
+    text-align: center;
+    font-weight: 900;
+    font-size: 20px;
+    margin: 10px 0 12px;
+}
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+.buy-btn {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 800;
+    font-size: 16px;
+}
+.product-desc {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* Отзывы */
+.review-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+/* Поддержка */
+.support-btn {
+    display: block;
+    margin: 12px 0;
+    padding: 12px;
+    text-align: center;
+    border-radius: 12px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* Нижняя навигационная полоса */
+.bottomnav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 45px; /* ~1 см */
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 999;
+}
+.tab {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    opacity: 0.6;
+}
+.tab.active {
+    opacity: 1;
+}
+
+/* Страницы */
+.page {
+    display: none;
+}
+.page.active {
+    display: block;
+}
